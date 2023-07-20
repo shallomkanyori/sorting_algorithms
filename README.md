@@ -24,7 +24,7 @@
 #### Task 2: Selection sort
 [2-selection_sort.c](2-selection_sort.c) implements a function that sorts an array of integers in ascending order using the Selection sort algorithm
 - Prototype: `void selection_sort(int *array, size_t size);`
-- Prints the array after each time two elements are swapped
+- Prints the `array` after each time two elements are swapped
 
 [2-O](2-O) contains the big O notations of the time complexity of the Selection sort algorithm, with 1 notation per line:
 - in the best case
@@ -35,7 +35,7 @@
 [3-quick_sort.c](3-quick_sort.c) implements a function that sorts an array of integers in ascending order using the Quick sort algorithm
 - Prototype: `void quick_sort(int *array, size_t size);`
 - Implements the Lomuto partition scheme; The pivot is always the last element of the partition being sorted.
-- Print the array after each time two elements are swapped
+- Prints the `array` after each time two elements are swapped
 
 [3-O](3-O) contains the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
 - in the best case
