@@ -1,7 +1,7 @@
 #include "sort.h"
 
-void quicksort_rec(int *array, size_t size, size_t start, size_t end);
-size_t partition(int *array, size_t size, size_t start, size_t end);
+void quicksort_rec(int *array, size_t size, ssize_t start, ssize_t end);
+int partition(int *array, size_t size, ssize_t start, ssize_t end);
 
 /**
  * quick_sort - quick sorts an array of integers
@@ -10,6 +10,9 @@ size_t partition(int *array, size_t size, size_t start, size_t end);
  */
 void quick_sort(int *array, size_t size)
 {
+	if (!array || size < 2)
+		return;
+
 	quicksort_rec(array, size, 0, size - 1);
 }
 
@@ -20,18 +23,16 @@ void quick_sort(int *array, size_t size)
  * @start: the first ind of the partition
  * @end: the last ind of the partition
  */
-void quicksort_rec(int *array, size_t size,  size_t start, size_t end)
+void quicksort_rec(int *array, size_t size,  ssize_t start, ssize_t end)
 {
-	size_t p_ind;
+	ssize_t p_ind;
 
 	if (start >= end)
 		return;
 
 	p_ind = partition(array, size, start, end);
 
-	if (p_ind > 0)
-		quicksort_rec(array, size, start, p_ind - 1);
-
+	quicksort_rec(array, size, start, p_ind - 1);
 	quicksort_rec(array, size, p_ind + 1, end);
 }
 
@@ -44,11 +45,11 @@ void quicksort_rec(int *array, size_t size,  size_t start, size_t end)
  *
  * Return: the index of the pivot
  */
-size_t partition(int *array, size_t size, size_t start, size_t end)
+int partition(int *array, size_t size, ssize_t start, ssize_t end)
 {
 	int pivot = array[end];
-	size_t p_ind = start;
-	size_t i;
+	ssize_t p_ind = start;
+	ssize_t i;
 	int tmp;
 
 	for (i = start; i < end; i++)
