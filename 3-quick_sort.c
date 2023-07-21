@@ -17,7 +17,7 @@ void quick_sort(int *array, size_t size)
  * quicksort_rec - recursively quick sorts an array of integers
  * @array: the array
  * @size: the size of the array
- * @start: the firt ind of the partition
+ * @start: the first ind of the partition
  * @end: the last ind of the partition
  */
 void quicksort_rec(int *array, size_t size,  size_t start, size_t end)
@@ -47,7 +47,7 @@ void quicksort_rec(int *array, size_t size,  size_t start, size_t end)
 size_t partition(int *array, size_t size, size_t start, size_t end)
 {
 	int pivot = array[end];
-	int p_ind = (int)start - 1;
+	size_t p_ind = start;
 	size_t i;
 	int tmp;
 
@@ -55,23 +55,25 @@ size_t partition(int *array, size_t size, size_t start, size_t end)
 	{
 		if (array[i] <= pivot)
 		{
-			p_ind++;
-			tmp = array[p_ind];
-			array[p_ind] = array[i];
-			array[i] = tmp;
-
-			if ((size_t)p_ind != i)
+			if (array[p_ind] != array[i])
+			{
+				tmp = array[p_ind];
+				array[p_ind] = array[i];
+				array[i] = tmp;
 				print_array(array, size);
+			}
+
+			p_ind++;
 		}
 	}
 
-	p_ind++;
-	tmp = array[p_ind];
-	array[p_ind] = array[end];
-	array[end] = tmp;
-
-	if ((size_t)p_ind != end)
+	if (array[p_ind] != array[end])
+	{
+		tmp = array[p_ind];
+		array[p_ind] = array[end];
+		array[end] = tmp;
 		print_array(array, size);
+	}
 
-	return ((size_t)p_ind);
+	return (p_ind);
 }
