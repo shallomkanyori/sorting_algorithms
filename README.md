@@ -96,3 +96,10 @@
 - in the best case
 - in the average case
 - in the worst case
+
+#### Task 9: Radix sort
+[105-radix_sort.c](105-radix_sort.c) implements a function that sorts an array of integers in ascending order using the Radix sort algorithm
+- Prototype: `void radix_sort(int *array, size_t size);`
+- Implements the `LSD` radix sort algorithm
+- Assumes that array will contain only numbers `>= 0`
+- Prints the `array` each time the significant digit is increased
