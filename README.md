@@ -87,7 +87,7 @@
 - in the worst case
 
 #### Task 8: Heap sort
-[1040-heap_sort.c](104-heap_sort.c) implements a function that sorts an array of integers in ascending order using the Heap sort algorithm
+[104-heap_sort.c](104-heap_sort.c) implements a function that sorts an array of integers in ascending order using the Heap sort algorithm
 - Prototype: `void heap_sort(int *array, size_t size);`
 - Implements the sift-down heap sort algorithm
 - Prints the `array` after each time two elements are swapped
@@ -103,3 +103,14 @@
 - Implements the `LSD` radix sort algorithm
 - Assumes that array will contain only numbers `>= 0`
 - Prints the `array` each time the significant digit is increased
+
+#### Task 10: Bitonic sort
+[106-bitonic_sort.c](106-bitonic_sort.c) implements a function that sorts an array of integers in ascending order using the Bitonic sort algorithm
+- Prototype: `void bitonic_sort(int *array, size_t size);`
+- Assumes `size` will be equal to `2^k` where `k >= 0` (when `array` is not `NULL`)
+- Prints the `array` after each time two elements are swapped
+
+[106-O](106-O) contains the big O notations of the time complexity of the Bitonic sort algorithm, with 1 notation per line:
+- in the best case
+- in the average case
+- in the worst case
