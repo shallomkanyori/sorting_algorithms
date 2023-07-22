@@ -61,3 +61,15 @@
 - in the best case
 - in the average case
 - in the worst case
+
+#### Task 6: Counting sort
+[102-counting_sort.c](102-counting_sort.c) implements a function that sorts an array of integers in ascending order using the Counting sort algorithm
+- Prototype: `void counting_sort(int *array, size_t size);`
+- Assumes that `array` will contain only numbers `>= 0`
+- Prints the counting array once it is set up
+	- This array is of size `k + 1` where `k` is the largest number in `array`
+
+[102-O](102-O) contains the big O notations of the time complexity of the Counting sort algorithm, with 1 notation per line:
+- in the best case
+- in the average case
+- in the worst case
