@@ -85,3 +85,14 @@
 - in the best case
 - in the average case
 - in the worst case
+
+#### Task 8: Heap sort
+[1040-heap_sort.c](104-heap_sort.c) implements a function that sorts an array of integers in ascending order using the Heap sort algorithm
+- Prototype: `void heap_sort(int *array, size_t size);`
+- Implements the sift-down heap sort algorithm
+- Prints the `array` after each time two elements are swapped
+
+[104-O](104-O) contains the big O notations of the time complexity of the Heap sort algorithm, with 1 notation per line:
+- in the best case
+- in the average case
+- in the worst case
