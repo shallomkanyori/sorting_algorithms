@@ -125,3 +125,13 @@
 - in the best case
 - in the average case
 - in the worst case
+
+#### Task 12: Dealer
+[1000-sort_deck.c](1000-sort_deck.c) implements a function that sorts a deck of cards
+- Prototype: `void sort_deck(deck_node_t **deck);`
+- Use the C standard library function `qsort`
+- Each node of the doubly linked list contains a card that cannot be modified. The nodes are swapped.
+- Assumes there is exactly 52 elements in the doubly linked list.
+- The deck is ordered:
+	- From `Ace` to `King`
+	- From Spades to Diamonds
