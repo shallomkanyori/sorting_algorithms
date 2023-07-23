@@ -114,3 +114,14 @@
 - in the best case
 - in the average case
 - in the worst case
+
+#### Task 11: Quick sort
+[107-quick_sort_hoare.c](107-quick_sort_hoare.c) implements a function that sorts an array of integers in ascending order using the Quick sort algorithm
+- Prototype: `void quick_sort_hoare(int *array, size_t size);`
+- Implements the Hoare partition scheme; The pivot is always the last element of the partition being sorted.
+- Prints the `array` after each time two elements are swapped
+
+[107-O](107-O) contains the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
+- in the best case
+- in the average case
+- in the worst case
